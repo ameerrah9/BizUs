@@ -22,8 +22,8 @@ class ApplicationController < Sinatra::Base
     end
   
     def current_user
-      # uses memoization to prevent duplicate database queries
       @current_user ||= User.find_by_id(session[:user_id]) if session[:user_id]
+      # uses memoization to prevent duplicate database queries
     end
   
   end
