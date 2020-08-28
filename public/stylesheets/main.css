@@ -4,6 +4,12 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    text-align: center;
+  }
+
+  img {
+    width: 50%;
+    height: auto;
   }
 
   html, body {
@@ -13,14 +19,14 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: lightblue;
-    color: #333;
+    background-color: black;
+    color: white;
     font-family: Sans-Serif;
     line-height: 18px;
   }
 
   .wrapper {
-    background: #fff;
+    background: black;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -36,7 +42,7 @@
   }
 
   h2 {
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid brown;
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 16px;
@@ -55,14 +61,14 @@
     overflow: hidden;
   }
 
-  .content {
+  .name {
     float: left;
     width: 60%; /* 480px / 800px */
   }
 
   .sidebar {
     background: #eee;
-    border: 1px solid #ccc;
+    border: 1px solid teal;
     float: right;
     padding: 2.08333333333%; /* 5px / 240px */
     width: 30%; /* 240px / 800px */
@@ -81,17 +87,29 @@
     margin-top: 20px;
     padding-top: 20px;
   }
+  .post {
+    padding: 10px;
+    border: solid 5px black;
+    border-radius: 5px;
+
+  }
+
+  .error {
+    color: red;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .wrapper {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    width: auto;
+    text-align: center;
+    width: 960px;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #73AD21;
   }
 
-  .content, .sidebar {
+  .name, .sidebar {
     float: none;
     width: 100%;
   }
@@ -111,5 +129,12 @@
   h2 {
     font-size: 18px;
     line-height: 24px;
+  }
+  .post {
+    border: solid 2px black;
+  }
+
+  .error {
+    color: red;
   }
 }

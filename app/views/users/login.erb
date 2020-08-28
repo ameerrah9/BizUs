@@ -1,0 +1,11 @@
+<h3>Welcome back! Please log in</h3>
+
+<% if flash[:error] %>
+<p class="error"><%= flash[:error] %></p>
+<% end %>
+
+<form action="/login" method="post">
+    <input type="text" name="username" placeholder="Enter your username">
+    <input type="password" name="password" placeholder="Enter your password">
+    <input type="submit" value="Login">
+</form>

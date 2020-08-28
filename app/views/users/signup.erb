@@ -1,0 +1,12 @@
+<h3>Welcome, new user! Please sign up</h3>
+
+<% if @error %>
+    <p class="error"><%= @error %></p>
+<% end %>
+
+<form action="/signup" method="post">
+    <input type="text" name="username" placeholder="Enter username">
+    <input type="email" name="email" placeholder="Enter email">
+    <input type="password" name="password" placeholder="Enter a password">
+    <input type="submit" value="Signup">
+</form>
