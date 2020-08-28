@@ -1,10 +1,10 @@
-<h3>Welcome, <%= current_user.username %>!</h3>
-
+<h2>Welcome, <%= current_user.username %>! Check out All the Business Plans</h2><br>
+<br>
 <% @biz_plans.each do |biz_plan| %>
     <div class="post">
         <p><%= biz_plan.name %> by <%= biz_plan.user.username %></p>
         <% if biz_plan.user == current_user %>
-            <p><a href="/biz_plans/<%= biz_plan.id %>/edit">Edit</a></p>
+            <p><a href="/biz_plans/<%= biz_plan.id %>/edit" class="button">Edit</a></p>
             
             <form action="/biz_plans/<%= biz_plan.id %>" method='post'>
                 <input type="hidden" name="_method" value="delete">
@@ -12,6 +12,8 @@
             </form>
             
         <% end %>
-    </div>
-<% end %>
-<p><a href="/biz_plans/new">Add a Business Plan</a></p>
+    </div><br>
+    <br>
+<% end %><br>
+<br>
+<p><a href="/biz_plans/new" class="button">Add a Business Plan</a></p>

@@ -11,10 +11,10 @@
     <input type="text" name="budget" value="<%= @biz_plan.budget %>"><br>
     <input type="submit" value="Edit Business Plan"><br>
 </form>
-
+<br>
 <form action='/biz_plans/<%= @biz_plan.id %>%' method='post'>
      <input type="hidden" name="_method" value="delete">
      <input type="submit" value="Delete Business Plan">
 </form>
 <br>
-<a href="/biz_plans">Cancel</a>
+<a href="/biz_plans" class="button">Cancel</a><br>

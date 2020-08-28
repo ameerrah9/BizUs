@@ -1,17 +1,24 @@
 <h1>Create A New Business Plan</h1>
-
+<br>
 <% if @biz_plan && @biz_plan.errors.any? %>
     <% @biz_plan.errors.full_messages.each do |msg| %>
         <p class="error"><%= msg %></p>
     <% end %>
 <% end %>
-
+<br>
 <form action='/biz_plans' method='post'>
     <label for="name">Business Name</label><br>
+    <br>
     <input type="text" name="name" placeholder="Enter Business Name"><br>
+    <br>
     <label for="mission">Business Mission</label><br>
+    <br>
     <input type="text" name="mission" placeholder="Enter Business Mission"><br>
+    <br>
     <label for="budget">Budget Amount</label><br>
+    <br>
     <input type="text" name="budget" placeholder="Enter Budget"><br>
+    <br>
     <input type="submit"><br>
+    <br>
 </form><br>
