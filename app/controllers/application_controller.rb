@@ -12,7 +12,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    erb :welcome
+    if logged_in?
+      redirect '/bix_plans'
+    else
+      erb :welcome
+    end
   end
 
   helpers do
@@ -20,12 +24,12 @@ class ApplicationController < Sinatra::Base
     def logged_in?
       !!current_user
     end
-  
+
     def current_user
       @current_user ||= User.find_by_id(session[:user_id]) if session[:user_id]
       # uses memoization to prevent duplicate database queries
     end
-  
+
   end
 
 end
