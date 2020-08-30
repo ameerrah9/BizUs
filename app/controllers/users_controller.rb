@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
 
-    get '/signup' do
-        erb :'users/signup'
-    end
+    get ('/signup') { erb :'users/signup' }
 
     post '/signup' do
         # validation on controller for data coming from signup form
@@ -18,9 +16,7 @@ class UsersController < ApplicationController
         
     end
 
-    get '/login' do 
-        erb :'users/login'
-    end
+    get ('/login') { erb :'users/login' }
 
     post '/login' do
         @user = User.find_by(username: params[:username])

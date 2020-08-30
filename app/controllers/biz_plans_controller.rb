@@ -1,12 +1,9 @@
 class BizPlansController < ApplicationController
-    
+            
     get '/biz_plans' do
-        if logged_in?
-            @biz_plans = BizPlan.all
-            erb :'biz_plans/index'
-        else
-            redirect '/login'
-        end
+        @biz_plans = BizPlan.all
+        erb :'biz_plans/index'
+        redirect '/login'
     end
     
     get '/biz_plans/new' do
