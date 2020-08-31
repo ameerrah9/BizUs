@@ -6,15 +6,11 @@
     <label for="name">Edit Business Name</label><br>
     <input id="name" type="text" name="name" value="<%= @biz_plan.name %>"><br>
     <label for="mission">Edit Business Mission</label><br>
-    <input class="mission" id="mission" type="text" name="mission" value="<%= @biz_plan.mission %>"><br>
+    <input id="mission" type="text" name="mission" value="<%= @biz_plan.mission %>"><br>
     <label for="budget">Edit Business Budget Amount</label><br>
     <input id="budget" type="text" name="budget" value="<%= @biz_plan.budget %>"><br>
-    <input type="submit" value="Edit Business Plan"><br>
+    <input type="submit" class="button" value="Edit Business Plan"><br>
 </form>
 <br>
-<form action='/biz_plans/<%= @biz_plan.id %>%' method='post'>
-     <input type="hidden" name="_method" value="delete">
-     <input type="submit" value="Delete Business Plan">
-</form>
 <br>
 <a href="/biz_plans" class="button">Cancel</a><br>

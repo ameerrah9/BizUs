@@ -110,11 +110,14 @@
 
     .post {
       padding: 10px;
-      border: solid 2px black;
-      border-radius: 5px;
-      background-color: cornflowerblue;
-      width: 30%;
-      height: 5%;
+      border: solid 5px #36454f;
+      border-radius: 5px;	   
+      border-radius: 10px;
+      width: 40%;
+      margin: auto;
+      margin-bottom: 10px;
+      background-color: #3d3d5c; /* slight purple */
+      color: #fff;  /* white */
     }
   
     .error {

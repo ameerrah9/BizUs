@@ -18,9 +18,12 @@
         <h3> Show Off Your Business with BizUs App </h3><br>
         <br>
         <%= yield %>
-        <p><a href='/signup' class="button">Signup</a></p>
-        <p><a href='/login' class="button">Login</a></p>
-        <p><a href='logout' class="button">Logout</a></p>
+        <% if logged_in? %>
+          <p><a href='logout' class="button">Logout</a></p>
+        <% else %>
+          <p><a href='/signup' class="button">Signup</a></p>
+          <p><a href='/login' class="button">Login</a></p>
+        <% end %>
       <footer class="branding">
         <small>&copy; 2020 <strong>SinatraBizUs</strong></small>
       </footer>

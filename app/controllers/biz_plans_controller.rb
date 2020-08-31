@@ -1,10 +1,13 @@
 class BizPlansController < ApplicationController
     
-    before { redirect_if_not_logged_in? }
-
     get '/biz_plans' do
-        @biz_plans = BizPlan.all
-        erb :'biz_plans/index'
+        # checking user authentication with helper method
+        if logged_in?
+            @biz_plans = BizPlan.all
+            erb :'biz_plans/index'
+        else
+            redirect '/login'
+        end
     end
     
     get '/biz_plans/new' do

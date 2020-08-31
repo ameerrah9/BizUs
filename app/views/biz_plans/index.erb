@@ -2,13 +2,13 @@
 <br>
 <% @biz_plans.each do |biz_plan| %>
     <div class="post">
-        <p><%= biz_plan.name %> by <%= biz_plan.user.username %></p>
+        <h3><%= biz_plan.name %> by <%= biz_plan.user.username %></h3>
         <% if biz_plan.user == current_user %>
             <p><a href="/biz_plans/<%= biz_plan.id %>/edit" class="button">Edit</a></p>
             
             <form action="/biz_plans/<%= biz_plan.id %>" method='post'>
                 <input type="hidden" name="_method" value="delete">
-                <input type="submit" value="Delete">
+                <input class="button" type="submit" value="Delete">
             </form>
             
         <% end %>
