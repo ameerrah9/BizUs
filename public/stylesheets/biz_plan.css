@@ -27,6 +27,11 @@
         width: 40%;
         height: 40%;
     }
+
+    .mission {
+        width: 40%;
+        height: 3s00px;
+    }
   
     /* --- Welcome Page Styles --- */
     body {
@@ -115,6 +120,11 @@
     .error {
       color: red;
     }
+
+    .mission {
+        width: 40%;
+        height: 300px;
+    }
   }
   
   @media screen and (max-width: 600px) {
@@ -171,5 +181,10 @@
     img {
         width: 40%;
         height: 40%;
+    }
+
+    .mission {
+        width: 40%;
+        height: 300px;
     }
   }

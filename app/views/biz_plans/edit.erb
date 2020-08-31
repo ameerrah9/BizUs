@@ -4,11 +4,11 @@
 <form action='/biz_plans/<%= @biz_plan.id %>' method='post'>
     <input type="hidden" name="_method" value="patch"><br>
     <label for="name">Edit Business Name</label><br>
-    <input type="text" name="name" value="<%= @biz_plan.name %>" size="50"><br>
+    <input id="name" type="text" name="name" value="<%= @biz_plan.name %>"><br>
     <label for="mission">Edit Business Mission</label><br>
-    <input type="text" name="mission" value="<%= @biz_plan.mission %>" size="250"><br>
+    <input class="mission" id="mission" type="text" name="mission" value="<%= @biz_plan.mission %>"><br>
     <label for="budget">Edit Business Budget Amount</label><br>
-    <input type="text" name="budget" value="<%= @biz_plan.budget %>"><br>
+    <input id="budget" type="text" name="budget" value="<%= @biz_plan.budget %>"><br>
     <input type="submit" value="Edit Business Plan"><br>
 </form>
 <br>

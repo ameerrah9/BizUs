@@ -1,9 +1,10 @@
 class BizPlansController < ApplicationController
-            
+    
+    before { redirect_if_not_logged_in? }
+
     get '/biz_plans' do
         @biz_plans = BizPlan.all
         erb :'biz_plans/index'
-        redirect '/login'
     end
     
     get '/biz_plans/new' do

@@ -2,8 +2,6 @@ require './config/environment'
 
 class ApplicationController < Sinatra::Base
 
-  before { redirect_if_not_logged_in? }
-
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
