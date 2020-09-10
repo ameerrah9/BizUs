@@ -1,0 +1,18 @@
+<h2>Welcome, <%= current_user.username %>! View your Business Plans below.</h2><br>
+<br>
+<br>
+    <div class="post">
+        <h3><%= @biz_plan.name %></h3>
+        <h3><%= @biz_plan.mission %></h3>
+        <h3><%= @biz_plan.budget %></h3>
+
+        <p><a href="/biz_plans/<%= @biz_plan.id %>/edit" class="button">Edit</a></p>
+            
+            <form action="/biz_plans/<%= @biz_plan.id %>" method='post'>
+                <input type="hidden" name="_method" value="delete">
+                <input class="button" type="submit" value="Delete">
+            </form>
+
+    </div><br>
+    <br>
+
