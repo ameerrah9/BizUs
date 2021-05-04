@@ -9,7 +9,17 @@ BizUs is a Sinatra library for dealing with planning a new business where users 
 gem install sinatra_biz_us
 ```
 
+# Set Up
 
+Simply clone this repository to your local directory.
+
+Once cloned in your terminal type the following command
+
+```
+open index.html
+```
+
+Enjoy!
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
